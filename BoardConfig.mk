@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/vida
+DEVICE_PATH := device/xiaomi/viva
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -48,14 +48,14 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := vida
+TARGET_BOOTLOADER_BOARD_NAME := viva
 TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6781
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := vida,viva
+TARGET_OTA_ASSERT_DEVICE := viva,vida
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -68,16 +68,16 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-TARGET_KERNEL_CONFIG := vida_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/vida
+TARGET_KERNEL_CONFIG := viva_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/viva
 
 # Kernel - prebuilt
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/mt6781.dtb
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
 # System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # AVB
 BOARD_AVB_ENABLE := true
@@ -128,7 +128,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := call-me-kk
+TW_DEVICE_VERSION := emiferpro
 TW_LOAD_VENDOR_MODULES := "haptic.ko"
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true

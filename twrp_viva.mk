@@ -22,11 +22,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 # Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from vida device
-$(call inherit-product, device/xiaomi/vida/device.mk)
+# Inherit from viva device
+$(call inherit-product, device/xiaomi/viva/device.mk)
 
-PRODUCT_DEVICE := vida
-PRODUCT_NAME := twrp_vida
-PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := vida
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_DEVICE := viva
+PRODUCT_NAME := twrp_viva
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi Note 11 Pro 4G
+PRODUCT_MANUFACTURER := Xiaomi
+BOARD_VENDOR := Xiaomi

@@ -20,13 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Inherit some common twrp stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from viva device
 $(call inherit-product, device/xiaomi/viva/device.mk)
 
 PRODUCT_DEVICE := viva
-PRODUCT_NAME := twrp_viva
+PRODUCT_NAME := omni_viva
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 11 Pro 4G
 PRODUCT_MANUFACTURER := Xiaomi

@@ -16,7 +16,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_viva.mk
+    $(LOCAL_DIR)/omni_viva.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_viva-eng
+    omni_viva-eng

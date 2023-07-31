@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common_64.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
 
 # If you want full multilingual support
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_default.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from PitchBlack Recovery's custom product configuration instead of OmniROM's
 # Delete any line that imports OmniROM's vendor config

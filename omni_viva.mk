@@ -1,24 +1,29 @@
+#
+# Copyright (C) 2023 Android Open Source Project
+# Copyright (C) 2023 Team Win Recovery Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Add this line if your device is 64-bit
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
-# Inherit from main device makefile, if had any. Otherwise, ignore.
-$(call inherit-product, device/viva/device.mk)
-
-# If your device is treble compatible (64-bit), add below line
-$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common_64.mk)
-
-# For some dalvik improvement, better to keep it
-$(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
-
-# If you want full multilingual support
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Inherit from PitchBlack Recovery's custom product configuration instead of OmniROM's
-# Delete any line that imports OmniROM's vendor config
+# Inherit some common twrp stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
+
+# Inherit from viva device
+$(call inherit-product, device/xiaomi/viva/device.mk)
 
 PRODUCT_DEVICE := viva
 PRODUCT_NAME := omni_viva
@@ -26,5 +31,3 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 11 Pro 4G
 PRODUCT_MANUFACTURER := Xiaomi
 BOARD_VENDOR := Xiaomi
-
-MAINTAINER := "emiferpro"
